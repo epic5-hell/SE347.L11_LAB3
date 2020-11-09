@@ -5,23 +5,7 @@ var flag = true;
 function myFunction() 
 {
     var input = document.getElementById("input").value ;
-
-
-
-    //{    do
-        // if(input !=  "")
-        //     var check = parseInt(input) ? true:false;
-
-        // if (check == true)
-        // {
-        //     break;
-        // }else{
-        //     input = "";
-        //     number = null;
-        // }
-        number = parseInt(input);
-    //} while (number == null || number == "" || !Number.isInteger(number))
-
+    number = parseInt(input);
 
     if (number < 2 || number == null || !Number.isInteger(number))
     {
