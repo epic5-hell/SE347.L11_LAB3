@@ -1,16 +1,29 @@
-var number;
+var number = null;
 var flag = true;
 
-function input() 
+
+function myFunction() 
 {
-    do
-    {
-        number = prompt("Nhập số nguyên: ");
-        number.trim();
-    } while (number == null || number == "" || Number.isInteger(number));
+    var input = document.getElementById("input").value ;
 
 
-    if (number < 2)
+
+    //{    do
+        // if(input !=  "")
+        //     var check = parseInt(input) ? true:false;
+
+        // if (check == true)
+        // {
+        //     break;
+        // }else{
+        //     input = "";
+        //     number = null;
+        // }
+        number = parseInt(input);
+    //} while (number == null || number == "" || !Number.isInteger(number))
+
+
+    if (number < 2 || number == null || !Number.isInteger(number))
     {
         flag = false;
     }
@@ -25,19 +38,13 @@ function input()
             }
         }
     }
-}
 
-function output() 
-{
     if (flag == true)
     {
-        document.write(number + " là số nguyên tố <br/>");
+        document.write(input + " là số nguyên tố <br/>");
     }
-    else
+    else if (flag == false || typeof number != "number")
     {
-        document.write(number + " không phải là số nguyên tố <br/>");
+        document.write(input + " không phải là số nguyên tố <br/>");
     }
 }
-
-input();
-output();
